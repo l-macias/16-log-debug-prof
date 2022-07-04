@@ -8,6 +8,8 @@ En la carpeta utils añadí la construcción del logger junto con sus transporte
 
 A la hora de hacer el profiling y de decodificarlo, en modo bloqueante, los resultados fueron:
 
+NODE PROFILING =================
+
 [Summary]:
    ticks  total  nonlib   name
    1258   14.1%   66.3%  JavaScript
@@ -28,10 +30,13 @@ A la hora de hacer el profiling y de decodificarlo, en modo bloqueante, los resu
 Luego lo hice como decía la consigna, le puse 3 console.log en la ruta info, y luego lo hice sin los console.log.
 Los resultados fueron similares, pero menos ticks sin los console.log
 
+ARTILLERY ===========
+
 Para realizar el artillery, con 50 conexiones y 20 requests utilicé la siguiente linea de comandos.
 artillery quick --count 50 -n 20 http://localhost:8080/info > resultado_artillery_info.txt
 Los resultados están en dicho archivo.
 
+AUTOCANNON ===========
 En autocannon, el resultado del reporte de 100 conexiones de 20 segundos fue:
 
 │ Stat    │ 2.5%   │ 50%     │ 97.5%   │ 99%     │ Avg        │ Stdev     │ Max     │
@@ -45,10 +50,12 @@ En autocannon, el resultado del reporte de 100 conexiones de 20 segundos fue:
 ├───────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
 │ Bytes/Sec │ 5.27 kB │ 5.27 kB │ 50.9 kB │ 86.9 kB │ 54.6 kB │ 28.1 kB │ 5.26 kB
 
-NODE INSPECTOR:
+NODE INSPECTOR ===========
 ejecutamos node --inspect src/index.js 
 y luego abrimos google chrome y en la barra de url escribimos chrome://inspect
+Vemos lo que tarda cada proceso, pero al ser solo info, como que todo tarda poco ja.
 
+OX ===========
 
 El diagrama de 0x lo hice con el siguiente comando:
 0x src/index.js 
