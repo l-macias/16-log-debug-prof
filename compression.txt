@@ -1,0 +1,62 @@
+Al ir a la ruta info, sin compresión, los datos mostrados pesan 689 bytes.
+En Cambio al utilizar GZIP, la información solo pesa 179 bytes. De esta manera comprimimos en un 385%.
+
+Para los loggers utilicé Winston porque además de que en la clase me pareció el mas completo, no deja de ser simple de utilizar.
+Además estuve buscando información sobre loggers, y vi que luego de NPMLog, Winston es el mas utilizado.
+
+En la carpeta utils añadí la construcción del logger junto con sus transportes. Tanto para consola como para archivos.
+
+A la hora de hacer el profiling y de decodificarlo, en modo bloqueante, los resultados fueron:
+
+[Summary]:
+   ticks  total  nonlib   name
+   1258   14.1%   66.3%  JavaScript
+    613    6.9%   32.3%  C++
+   1218   13.6%   64.2%  GC
+   7050   78.8%          Shared libraries
+     27    0.3%          Unaccounted
+
+     Luego hice el mismo proceso pero en modo no bloqueante, y los resultados fueron:
+
+     [Summary]:
+   ticks  total  nonlib   name
+     21    1.3%    6.3%  JavaScript
+    315   19.8%   93.8%  C++
+     88    5.5%   26.2%  GC
+   1254   78.9%          Shared libraries
+
+Luego lo hice como decía la consigna, le puse 3 console.log en la ruta info, y luego lo hice sin los console.log.
+Los resultados fueron similares, pero menos ticks sin los console.log
+
+Para realizar el artillery, con 50 conexiones y 20 requests utilicé la siguiente linea de comandos.
+artillery quick --count 50 -n 20 http://localhost:8080/info > resultado_artillery_info.txt
+Los resultados están en dicho archivo.
+
+En autocannon, el resultado del reporte de 100 conexiones de 20 segundos fue:
+
+│ Stat    │ 2.5%   │ 50%     │ 97.5%   │ 99%     │ Avg        │ Stdev     │ Max     │
+├─────────┼────────┼─────────┼─────────┼─────────┼────────────┼───────────┼─────────┤
+│ Latency │ 710 ms │ 1209 ms │ 4749 ms │ 5075 ms │ 1549.19 ms │ 946.33 ms │ 5479 ms │
+└─────────┴────────┴─────────┴─────────┴─────────┴────────────┴───────────┴─────────┘
+┌───────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+│ Stat      │ 1%      │ 2.5%    │ 50%     │ 97.5%   │ Avg     │ Stdev   │ Min     │
+├───────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+│ Req/Sec   │ 6       │ 6       │ 58      │ 99      │ 62.25   │ 31.98   │ 6       │
+├───────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
+│ Bytes/Sec │ 5.27 kB │ 5.27 kB │ 50.9 kB │ 86.9 kB │ 54.6 kB │ 28.1 kB │ 5.26 kB
+
+NODE INSPECTOR:
+ejecutamos node --inspect src/index.js 
+y luego abrimos google chrome y en la barra de url escribimos chrome://inspect
+
+
+El diagrama de 0x lo hice con el siguiente comando:
+0x src/index.js 
+y utilice el autocannon.js para la comprobación.
+Los resultados dan buenos resultados ya que es solo la vista de info, pero si tengo que destacar una línea
+sin excelente resultado, es la línea 1 del index.js donde importo la librería express.
+
+
+
+
+

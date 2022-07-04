@@ -2,7 +2,7 @@ const express = require("express");
 const { Router } = express;
 const router = new Router();
 const numCpus = require("os").cpus().length;
-
+const compression = require("compression");
 const info = {
     argumentosDeEntrada: process.argv,
     sistemaOperativo: process.platform,
@@ -14,7 +14,7 @@ const info = {
     carpetaProyecto: process.cwd(),
     procesdoresDisponibles: numCpus,
 };
-router.get("/", (req, res) => {
+router.get("/", compression(), (req, res) => {
     res.send(info);
 });
 

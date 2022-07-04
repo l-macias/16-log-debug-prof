@@ -1,5 +1,6 @@
 const express = require("express");
 const passport = require("passport");
+const logger = require("../utils/logger");
 const { Router } = express;
 const router = new Router();
 
@@ -12,7 +13,7 @@ router.get("/failSignup", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-    console.log(`Yendo a login`);
+    logger.info(`Yendo a login`);
     res.render("pages/login");
 });
 

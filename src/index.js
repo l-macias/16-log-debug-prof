@@ -10,7 +10,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const User = require("./models/Users.js");
-
+const logger = require("./utils/logger");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 
@@ -18,7 +18,7 @@ const controllersdb = require("./controllers/controllerDb.js");
 
 const loginRoutes = require("./routes/login");
 const infoRoutes = require("./routes/info");
-// const randomRoutes = require("./routes/random");
+const randomRoutes = require("./routes/random");
 
 //PASPORT LOCALSTRATEGY
 
@@ -28,11 +28,11 @@ passport.use(
         User.findOne({ username }, (err, user) => {
             if (err) return done(err);
             if (!user) {
-                console.log("Usuario no encontrado.");
+                logger.error("Usuario no encontrado.");
                 return done(null, false);
             }
             if (!isValidPassword(user, password)) {
-                console.log("Error de contraseña.");
+                logger.error("Error de contraseña.");
                 return done(null, false);
             }
             return done(null, user);
@@ -52,7 +52,7 @@ passport.use(
                     return done(err);
                 }
                 if (user) {
-                    console.log(`El usuario ${username} ya existe`);
+                    logger.error(`El usuario ${username} ya existe`);
                     return done(null, false);
                 }
                 const newUser = {
@@ -81,7 +81,7 @@ passport.deserializeUser((id, done) => {
 });
 
 function isValidPassword(user, password) {
-    console.log(`chequeando contraseña ${password} con ${user.password}`);
+    logger.info(`chequeando contraseña ${password} con ${user.password}`);
 
     return bcrypt.compareSync(password, user.password);
 }
@@ -98,7 +98,7 @@ app.set("view engine", "ejs");
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(process.cwd() + "/public")); //Adelantando el uso del process jajaja
+app.use(express.static(process.cwd() + "/public"));
 
 app.use(
     session({
@@ -116,7 +116,7 @@ app.use(
 
 app.use("/", loginRoutes);
 app.use("/info", infoRoutes);
-// app.use("/api/random", randomRoutes);
+app.use("/api/random", randomRoutes);
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -142,12 +142,17 @@ app.post("/logout", authorize, (req, res) => {
     }
 });
 
-app.get("/api/random", (req, res) => {
-    res.send(
-        `Servidor en puerto ${PORT} - <b>PID ${
-            process.pid
-        }</b> - ${new Date().toLocaleString()}`
-    );
+// app.get("/api/random", (req, res) => {
+//     res.send(
+//         `Servidor en puerto ${PORT} - <b>PID ${
+//             process.pid
+//         }</b> - ${new Date().toLocaleString()}`
+//     );
+// });
+
+app.get("*", (req, res) => {
+    logger.warn("Ruta no existente");
+    res.send("Ruta no existente");
 });
 
 const args = yargs
@@ -161,30 +166,30 @@ const PORT = args.puerto || process.argv[2] || 8080;
 
 // Levantamos la base de Datos y  el Servidor
 controllersdb.conectarDB(config.URL_MONGODB, (err) => {
-    if (err) return console.log(`Error al conectar con mongo: ${err}`);
-    console.log("Conexión con MongoDB establecida correctamente");
+    if (err) return logger.error(`Error al conectar con mongo: ${err}`);
+    logger.info("Conexión con MongoDB establecida correctamente");
 });
 
 if (cluster.isMaster && args.modo === "CLUSTER") {
     for (let i = 0; i < numCpus; i++) {
         cluster.fork();
-        console.log(
+        logger.info(
             `El Trabajador ${i + 1} con PID ${process.pid} se ha unido\n`
         );
     }
     cluster.on("exit", (worker, code) => {
-        console.log(
+        logger.info(
             `El worker ${worker.process.pid} perdió la vida trabajando. Será recordado como un héroe`
         );
         cluster.fork(); // Resucitamos al trabajador caído y ponemos uno parecido xD
-        console.log(
+        logger.info(
             `Nuevo Worker con el PID: ${worker.process.pid}. Ojala tenga mas suerte que el anterior`
         );
     });
 } else {
     app.listen(PORT, (err) => {
-        if (err) return console.log(`Error al iniciar el servidor: ${err}`);
-        console.log(
+        if (err) return logger.error(`Error al iniciar el servidor: ${err}`);
+        logger.info(
             `Servidor corriendo en el puerto ${PORT} y en modo ${args.modo}\n`
         );
     });

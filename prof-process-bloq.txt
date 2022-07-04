@@ -1,0 +1,694 @@
+Statistical profiling result from isolate-0x4fb6770-136709-v8.log, (8948 ticks, 27 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   6687   74.7%          /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+    358    4.0%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      3    0.0%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.29
+      2    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    716    8.0%   37.7%  LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    515    5.8%   27.1%  LazyCompile: *<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:14:22
+      3    0.0%    0.2%  LazyCompile: *resolve node:path:1091:10
+      3    0.0%    0.2%  LazyCompile: *normalizeString node:path:66:25
+      3    0.0%    0.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      2    0.0%    0.1%  Function: ^trySelfParentPath node:internal/modules/cjs/loader:427:27
+      1    0.0%    0.1%  LazyCompile: *dirname node:path:1275:10
+      1    0.0%    0.1%  Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1    0.0%    0.1%  Function: ^updateChildren node:internal/modules/cjs/loader:165:24
+      1    0.0%    0.1%  Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1    0.0%    0.1%  Function: ^toString node:buffer:783:46
+      1    0.0%    0.1%  Function: ^isAbsolute node:path:1156:13
+      1    0.0%    0.1%  Function: ^importModuleDynamicallyWrap node:internal/vm/module:435:37
+      1    0.0%    0.1%  Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1    0.0%    0.1%  Function: ^getOptions node:internal/fs/utils:314:20
+      1    0.0%    0.1%  Function: ^emit node:events:474:44
+      1    0.0%    0.1%  Function: ^dirname node:path:1275:10
+      1    0.0%    0.1%  Function: ^deserializeObject /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    0.0%    0.1%  Function: ^_write node:internal/streams/writable:283:16
+      1    0.0%    0.1%  Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1    0.0%    0.1%  Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    0.0%    0.1%  Function: ^FastBuffer node:internal/buffer:958:14
+
+ [C++]:
+   ticks  total  nonlib   name
+    261    2.9%   13.8%  __pthread_cond_wait
+    125    1.4%    6.6%  __write@@GLIBC_2.2.5
+     87    1.0%    4.6%  epoll_pwait@@GLIBC_2.6
+     35    0.4%    1.8%  fwrite@@GLIBC_2.2.5
+     18    0.2%    0.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     14    0.2%    0.7%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+     10    0.1%    0.5%  _IO_file_xsputn@@GLIBC_2.2.5
+      9    0.1%    0.5%  __mprotect@@GLIBC_PRIVATE
+      8    0.1%    0.4%  __libc_malloc@@GLIBC_2.2.5
+      5    0.1%    0.3%  std::ostream::operator<<(int)@@GLIBCXX_3.4
+      5    0.1%    0.3%  cfree@GLIBC_2.2.5
+      4    0.0%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      3    0.0%    0.2%  __mmap@@GLIBC_PRIVATE
+      3    0.0%    0.2%  __libc_read
+      2    0.0%    0.1%  syscall@@GLIBC_2.2.5
+      2    0.0%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.0%    0.1%  fputc@@GLIBC_2.2.5
+      2    0.0%    0.1%  __pthread_mutex_unlock_usercnt
+      2    0.0%    0.1%  __munmap@@GLIBC_PRIVATE
+      2    0.0%    0.1%  __lll_lock_wait
+      1    0.0%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::locale::id::_M_id() const@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.0%    0.1%  operator new(unsigned long)@@GLIBCXX_3.4
+      1    0.0%    0.1%  operator delete(void*)@@GLIBCXX_3.4
+      1    0.0%    0.1%  getrusage@@GLIBC_2.2.5
+      1    0.0%    0.1%  char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)@@GLIBCXX_3.4.14
+      1    0.0%    0.1%  __pthread_cond_signal
+      1    0.0%    0.1%  __GI___pthread_rwlock_wrlock
+      1    0.0%    0.1%  __GI___pthread_rwlock_unlock
+      1    0.0%    0.1%  __GI___pthread_mutex_lock
+      1    0.0%    0.1%  _IO_file_write@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1258   14.1%   66.3%  JavaScript
+    613    6.9%   32.3%  C++
+   1218   13.6%   64.2%  GC
+   7050   78.8%          Shared libraries
+     27    0.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     96   46.8%    1.1%  __write@@GLIBC_2.2.5
+     34   16.6%    0.4%  fwrite@@GLIBC_2.2.5
+     15    7.3%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     13    6.3%    0.1%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      8    3.9%    0.1%  _IO_file_xsputn@@GLIBC_2.2.5
+      6    2.9%    0.1%  __libc_malloc@@GLIBC_2.2.5
+      5    2.4%    0.1%  std::ostream::operator<<(int)@@GLIBCXX_3.4
+      5    2.4%    0.1%  __mprotect@@GLIBC_PRIVATE
+      4    2.0%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      3    1.5%    0.0%  cfree@GLIBC_2.2.5
+      2    1.0%    0.0%  syscall@@GLIBC_2.2.5
+      2    1.0%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    1.0%    0.0%  fputc@@GLIBC_2.2.5
+      1    0.5%    0.0%  std::locale::id::_M_id() const@@GLIBCXX_3.4
+      1    0.5%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.5%    0.0%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.5%    0.0%  operator new(unsigned long)@@GLIBCXX_3.4
+      1    0.5%    0.0%  operator delete(void*)@@GLIBCXX_3.4
+      1    0.5%    0.0%  __mmap@@GLIBC_PRIVATE
+      1    0.5%    0.0%  __lll_lock_wait
+      1    0.5%    0.0%  __GI___pthread_rwlock_wrlock
+      1    0.5%    0.0%  __GI___pthread_mutex_lock
+      1    0.5%    0.0%  _IO_file_write@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   6687   74.7%  /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+   2272   34.0%    /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+    995   43.8%      LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    995  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    995  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    995  100.0%            LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+    360   15.8%      Function: ^compileFunction node:vm:308:25
+    357   99.2%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    357  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+    338   94.7%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     19    5.3%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+    309   13.6%      Function: ^randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    309  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    309  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    309  100.0%            LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+     60    2.6%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     50   83.3%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      7   14.0%          Function: ~<anonymous> node:crypto:1:1
+      7  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5   10.0%          Function: ~<anonymous> node:tls:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5   10.0%          Function: ~<anonymous> node:http:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    6.0%          Function: ~<anonymous> node:tty:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    6.0%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.0%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:287:8
+      2    4.0%          LazyCompile: ~lazyLoadStreams node:fs:2845:25
+      2  100.0%            LazyCompile: ~get ReadStream node:fs:2988:17
+      2    4.0%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.0%          Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.0%          Function: ~<anonymous> node:child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.0%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.0%          Function: ~<anonymous> node:_http_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    4.0%          Function: ~<anonymous> node:_http_client:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:414:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    2.0%          LazyCompile: ~get node:dns:334:8
+      1  100.0%            /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1    2.0%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:internal/crypto/cipher:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.0%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      9   15.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      9  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      9  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    1.7%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+     40    1.8%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     40  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      9   22.5%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      9  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      7   17.5%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      7  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5   12.5%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:414:29
+      5  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      4   10.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    7.5%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    7.5%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    5.0%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.5%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:225:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    2.5%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:453:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    2.5%          LazyCompile: ~initializeReport node:internal/bootstrap/pre_execution:175:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    2.5%          Function: ~<anonymous> node:internal/modules/esm/translators:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.5%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    2.5%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.5%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     33    1.5%      /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      5   15.2%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      4   80.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      3   75.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1   25.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   20.0%          Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2    6.1%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:488:36
+      2  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:553:30
+      2  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:553:30
+      2    6.1%        LazyCompile: ~command /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:161:12
+      1   50.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server.js:178:42
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection_pool.js:264:23
+      1   50.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:63:43
+      1  100.0%            LazyCompile: ~prepareHandshakeDocument /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:128:34
+      2    6.1%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1   50.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1   50.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      2    6.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2    6.1%        Function: ^FastBuffer node:internal/buffer:958:14
+      2  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      2  100.0%            Function: ^allocate node:buffer:398:18
+      1    3.0%        LazyCompile: ~trimControlChars /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/whatwg-url/lib/url-state-machine.js:445:26
+      1  100.0%          Function: ^URLStateMachine /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%            LazyCompile: ~module.exports.basicURLParse /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1    3.0%        LazyCompile: ~strEscape /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/safe-stable-stringify/index.js:55:20
+      1  100.0%          LazyCompile: ~stringifyFnReplacer /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/safe-stable-stringify/index.js:203:32
+      1  100.0%            LazyCompile: ~stringify /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/safe-stable-stringify/index.js:594:22
+      1    3.0%        LazyCompile: ~populateMaps /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mime-types/index.js:154:23
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mime-types/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    3.0%        LazyCompile: ~parseOpts /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1  100.0%          LazyCompile: ~Run /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    3.0%        LazyCompile: ~parse /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/node_modules/semver/functions/parse.js:6:15
+      1  100.0%          LazyCompile: ~module.exports.evaluate /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:277:35
+      1  100.0%            LazyCompile: ~exports.find /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    3.0%        LazyCompile: ~getStack /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/depd/index.js:381:19
+      1  100.0%          LazyCompile: ~depd /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/depd/index.js:103:15
+      1  100.0%            Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/body-parser/index.js:1:1
+      1    3.0%        LazyCompile: ~execute /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/update.js:22:12
+      1  100.0%          LazyCompile: ~execute /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/update.js:70:12
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/execute_operation.js:148:61
+      1    3.0%        LazyCompile: ~enable /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/debug/src/debug.js:138:16
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1    3.0%        LazyCompile: ~checkServerIdentity node:tls:274:59
+      1  100.0%          LazyCompile: ~onConnectSecure node:_tls_wrap:1516:25
+      1  100.0%            Function: ^emit node:events:474:44
+      1    3.0%        LazyCompile: ~checkCollectionName /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:20:29
+      1  100.0%          LazyCompile: ~Collection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/collection.js:65:16
+      1  100.0%            LazyCompile: ~collection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/db.js:182:15
+      1    3.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/connection_string.js:55:72
+      1  100.0%          LazyCompile: ~onresolve node:dns:207:19
+      1    3.0%        LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+      1  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1    3.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@colors/colors/lib/colors.js:96:23
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@colors/colors/lib/colors.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    3.0%        Function: ^resolve node:path:1091:10
+      1  100.0%          Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1    3.0%        Function: ^read node:internal/modules/package_json_reader:16:14
+      1  100.0%          Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1    3.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.0%        Function: ^compileFunction node:vm:308:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    3.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+   1543   23.1%    LazyCompile: *<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:14:22
+   1543  100.0%      /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+   1543  100.0%        Function: ^randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+   1543  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+   1543  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+   1225   18.3%    Function: ^randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+   1225  100.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+   1225  100.0%        LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+   1225  100.0%          LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+   1225  100.0%            LazyCompile: ~dispatch /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:98:45
+    453    6.8%    LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    453  100.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    453  100.0%        LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    453  100.0%          LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+    453  100.0%            LazyCompile: ~dispatch /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:98:45
+
+    716    8.0%  LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    716  100.0%    LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    716  100.0%      LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    716  100.0%        LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+    716  100.0%          LazyCompile: ~dispatch /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:98:45
+    716  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+
+    515    5.8%  LazyCompile: *<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:14:22
+    284   55.1%    /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+    284  100.0%      Function: ^randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    284  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    284  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    284  100.0%            LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+    231   44.9%    Function: ^randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    231  100.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    231  100.0%        LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    231  100.0%          LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+    231  100.0%            LazyCompile: ~dispatch /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:98:45
+
+    358    4.0%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+    349   97.5%    /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+    320   91.7%      LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+    320  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+    320  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+    320  100.0%            LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+      6    1.7%      /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1   16.7%        LazyCompile: ~parse /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bytes/index.js:141:15
+      1  100.0%          LazyCompile: ~urlencoded /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/body-parser/lib/types/urlencoded.js:43:21
+      1  100.0%            Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/index.js:1:1
+      1   16.7%        LazyCompile: ~createToken /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/node_modules/semver/internal/re.js:11:21
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/node_modules/semver/internal/re.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1   16.7%        LazyCompile: ~MongoCredentials /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/mongo_credentials.js:30:16
+      1  100.0%          LazyCompile: ~resolveAuthMechanism /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/mongo_credentials.js:70:25
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:73:85
+      1   16.7%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   16.7%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   16.7%        Function: ^compileFunction node:vm:308:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+
+    261    2.9%  __pthread_cond_wait
+
+    125    1.4%  __write@@GLIBC_2.2.5
+     96   76.8%    /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      4    4.2%      /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1   25.0%        LazyCompile: ~resolveAuthMechanism /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/mongo_credentials.js:70:25
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:73:85
+      1  100.0%            LazyCompile: ~messageHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1   25.0%        LazyCompile: ~getStack /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/depd/index.js:381:19
+      1  100.0%          LazyCompile: ~depd /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/depd/index.js:103:15
+      1  100.0%            Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/body-parser/index.js:1:1
+      1   25.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   25.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      3    3.1%      LazyCompile: *randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+      3  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+      3  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+      2    2.1%      LazyCompile: ~store.generate /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:158:28
+      2  100.0%        LazyCompile: ~generate /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:363:22
+      2  100.0%          LazyCompile: ~session /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:179:26
+      2  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      2    2.1%      LazyCompile: ~processWaitQueue /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection_pool.js:417:26
+      2  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      2    2.1%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:81:28
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.1%      LazyCompile: ~emit node:events:474:44
+      1   50.0%        LazyCompile: ~addChunk /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:295:18
+      1  100.0%          LazyCompile: ~readableAddChunk /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:249:26
+      1  100.0%            LazyCompile: ~Readable.push /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:222:36
+      1   50.0%        LazyCompile: ~_addListener node:events:554:22
+      1  100.0%          LazyCompile: ~addListener node:events:622:58
+      1  100.0%            LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:134:29
+      2    2.1%      LazyCompile: ~command /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:161:12
+      1   50.0%        LazyCompile: ~executeScram /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:74:22
+      1  100.0%          LazyCompile: ~auth /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:39:9
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:73:85
+      1   50.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:63:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:128:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:47:33
+      1    1.0%      LazyCompile: ~xor /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:197:13
+      1  100.0%        LazyCompile: ~continueScramConversation /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1  100.0%            LazyCompile: ~messageHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1    1.0%      LazyCompile: ~write node:_http_outgoing:701:49
+      1  100.0%        LazyCompile: ~writetop /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:270:24
+      1  100.0%          LazyCompile: ~end /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:250:27
+      1  100.0%            LazyCompile: ~send /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/response.js:111:25
+      1    1.0%      LazyCompile: ~use /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/application.js:194:23
+      1  100.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~updateRsFromPrimary /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology_description.js:276:29
+      1  100.0%        LazyCompile: ~update /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:384:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:560:53
+      1    1.0%      LazyCompile: ~updateOne /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/collection.js:167:14
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/connect-mongo/build/main/lib/MongoStore.js:236:10
+      1  100.0%          /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1  100.0%            /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1    1.0%      LazyCompile: ~unenroll node:timers:78:18
+      1  100.0%        LazyCompile: ~clearTimeout node:timers:184:22
+      1  100.0%          LazyCompile: ~processWaitQueue /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:636:26
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:384:24
+      1    1.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    1.0%      LazyCompile: ~toPathIfFileURL node:internal/url:1496:25
+      1  100.0%        LazyCompile: ~realpathSync node:fs:2412:22
+      1  100.0%          LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1    1.0%      LazyCompile: ~shouldCompress /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/compression/index.js:254:25
+      1  100.0%        LazyCompile: ~onResponseHeaders /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/compression/index.js:140:47
+      1  100.0%          LazyCompile: ~writeHead /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/on-headers/index.js:28:29
+      1  100.0%            LazyCompile: ~_implicitHeader node:_http_server:264:68
+      1    1.0%      LazyCompile: ~setup /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/connect-mongo/node_modules/debug/src/common.js:7:15
+      1  100.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/connect-mongo/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%        LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1  100.0%          LazyCompile: ~makeConnection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:227:24
+      1  100.0%            LazyCompile: ~connect /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:15:17
+      1    1.0%      LazyCompile: ~setHeader node:_http_outgoing:574:57
+      1  100.0%        LazyCompile: ~expressInit /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~trim_prefix /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/index.js:293:23
+      1    1.0%      LazyCompile: ~selectServer /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:286:17
+      1  100.0%        LazyCompile: ~executeWithServerSelection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/execute_operation.js:66:36
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/execute_operation.js:17:48
+      1  100.0%            LazyCompile: ~maybePromise /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:482:22
+      1    1.0%      LazyCompile: ~resolver node:dns:218:18
+      1  100.0%        Function: ~<anonymous> node:dns:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    1.0%      LazyCompile: ~randomize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:7:19
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/routes/random.js:20:17
+      1  100.0%          LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+      1    1.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.0%      LazyCompile: ~parseFileMode node:internal/validators:59:23
+      1  100.0%        Function: ^openSync node:fs:576:18
+      1  100.0%          Function: ^readFileSync node:fs:450:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~parse /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/commands.js:577:10
+      1  100.0%        Function: ^messageHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%          Function: ^emit node:events:474:44
+      1  100.0%            Function: ^processIncomingData /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    1.0%      LazyCompile: ~onceWrapper node:events:640:21
+      1  100.0%        Function: ^emit node:events:474:44
+      1  100.0%          LazyCompile: ~afterConnect node:net:1119:22
+      1    1.0%      LazyCompile: ~normalizeArgs node:net:217:23
+      1  100.0%        LazyCompile: ~Socket.connect node:net:937:36
+      1  100.0%          LazyCompile: ~connect node:_tls_wrap:1597:35
+      1  100.0%            LazyCompile: ~makeConnection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:227:24
+      1    1.0%      LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          LazyCompile: ~router /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/index.js:46:18
+      1  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1    1.0%      LazyCompile: ~module.exports.validate_package_json /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:46:48
+      1  100.0%        LazyCompile: ~validate_config /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%          LazyCompile: ~exports.find /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%            Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bcrypt/bcrypt.js:1:1
+      1    1.0%      LazyCompile: ~module.exports /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/plugins/validateBeforeSave.js:7:26
+      1  100.0%        LazyCompile: ~Schema.plugin /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/schema.js:1504:35
+      1  100.0%          LazyCompile: ~applyPlugins /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/helpers/schema/applyPlugins.js:3:39
+      1  100.0%            LazyCompile: ~Mongoose._applyPlugins /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/index.js:622:44
+      1    1.0%      LazyCompile: ~maybeReadMore_ node:internal/streams/readable:609:24
+      1  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.0%      LazyCompile: ~makeRequireFunction node:internal/modules/cjs/helpers:58:29
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      LazyCompile: ~makeFirstMessage /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:61:26
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:25:32
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/crypto/random:105:43
+      1  100.0%            LazyCompile: ~onJobDone node:internal/crypto/random:300:19
+      1    1.0%      LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      1  100.0%        Function: ^processTimers node:internal/timers:487:25
+      1    1.0%      LazyCompile: ~jsonParser /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%        LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/index.js:280:64
+      1    1.0%      LazyCompile: ~isUint32 node:internal/validators:40:18
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/validators:101:40
+      1  100.0%          LazyCompile: ~compileFunction node:vm:308:25
+      1  100.0%            LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      1    1.0%      LazyCompile: ~isSaved /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:430:21
+      1  100.0%        LazyCompile: ~shouldSave /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:440:24
+      1  100.0%          LazyCompile: ~end /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/index.js:250:27
+      1  100.0%            LazyCompile: ~send /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/response.js:111:25
+      1    1.0%      LazyCompile: ~hrtime node:internal/process/per_thread:79:16
+      1  100.0%        Function: ^now /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:708:13
+      1  100.0%          LazyCompile: ~Connection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:37:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:16:29
+      1    1.0%      LazyCompile: ~handleOperationResult /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server.js:322:42
+      1  100.0%        Function: ^messageHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%          Function: ^emit node:events:474:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    1.0%      LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~next /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:116:16
+      1  100.0%          LazyCompile: ~dispatch /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/route.js:98:45
+      1  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1    1.0%      LazyCompile: ~getPathFromURLPosix node:internal/url:1395:29
+      1  100.0%        LazyCompile: ~fileURLToPath node:internal/url:1413:23
+      1  100.0%          LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:939:31
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1    1.0%      LazyCompile: ~get isReadable /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server_description.js:95:19
+      1  100.0%        LazyCompile: ~TopologyDescription /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology_description.js:29:16
+      1  100.0%          LazyCompile: ~Topology /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:58:16
+      1  100.0%            LazyCompile: ~createTopology /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/connect.js:53:24
+      1    1.0%      LazyCompile: ~get data /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/session/cookie.js:117:11
+      1  100.0%        LazyCompile: ~toJSON /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express-session/session/cookie.js:147:19
+      1  100.0%          /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/connect-mongo/build/main/lib/MongoStore.js:236:10
+      1    1.0%      LazyCompile: ~get /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/index.js:42:80
+      1  100.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/drivers/node-mongodb-native/decimal128.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~fromString /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:454:22
+      1  100.0%        LazyCompile: ~ns /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:432:12
+      1  100.0%          LazyCompile: ~MongoClient /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~connect /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/mongo_client.js:178:19
+      1    1.0%      LazyCompile: ~finishMaybe node:internal/streams/writable:731:21
+      1  100.0%        LazyCompile: ~Writable.end node:internal/streams/writable:594:34
+      1  100.0%          LazyCompile: ~Socket.end node:net:608:32
+      1  100.0%            LazyCompile: ~socketOnEnd node:_http_server:602:21
+      1    1.0%      LazyCompile: ~findLongestRegisteredExtension node:internal/modules/cjs/loader:413:40
+      1  100.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    1.0%      LazyCompile: ~fastparse /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/parseurl/index.js:95:20
+      1  100.0%        LazyCompile: ~originalurl /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/parseurl/index.js:65:22
+      1  100.0%          LazyCompile: ~serveStatic /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/serve-static/index.js:72:31
+      1  100.0%            LazyCompile: ~handle /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/express/lib/router/layer.js:86:49
+      1    1.0%      LazyCompile: ~createCollection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/db.js:143:21
+      1  100.0%        LazyCompile: ~createCollection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/connection.js:398:82
+      1  100.0%          LazyCompile: ~Connection.onOpen /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/connection.js:626:39
+      1  100.0%            LazyCompile: ~_setClient /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/connection.js:826:20
+      1    1.0%      LazyCompile: ~connectionIsStale /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection_pool.js:343:27
+      1  100.0%        LazyCompile: ~checkIn /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection_pool.js:148:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+      1  100.0%            LazyCompile: ~handleOperationResult /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server.js:322:42
+      1    1.0%      LazyCompile: ~config /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/dotenv/lib/main.js:55:17
+      1  100.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/options/config.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~concat node:buffer:536:32
+      1  100.0%        LazyCompile: ~read /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:953:9
+      1  100.0%          LazyCompile: ~processIncomingData /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%            LazyCompile: ~_write /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1    1.0%      LazyCompile: ~compareObjectId /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology_description.js:260:25
+      1  100.0%        LazyCompile: ~updateRsFromPrimary /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology_description.js:276:29
+      1  100.0%          LazyCompile: ~update /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:384:24
+      1    1.0%      LazyCompile: ~append node:internal/linkedlist:30:16
+      1  100.0%        LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%          LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%            LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1    1.0%      LazyCompile: ~_write node:internal/streams/writable:283:16
+      1  100.0%        Function: ^Writable.write node:internal/streams/writable:333:36
+      1  100.0%          Function: ^ondata node:internal/streams/readable:752:18
+      1  100.0%            Function: ^emit node:events:474:44
+      1    1.0%      LazyCompile: ~_createClass /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/are-we-there-yet/node_modules/readable-stream/lib/internal/streams/buffer_list.js:13:22
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/are-we-there-yet/node_modules/readable-stream/lib/internal/streams/buffer_list.js:29:10
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/are-we-there-yet/node_modules/readable-stream/lib/internal/streams/buffer_list.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~ServerResponse node:_http_server:178:24
+      1  100.0%        LazyCompile: ~parserOnIncoming node:_http_server:852:26
+      1  100.0%          LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    1.0%      LazyCompile: ~Schema.interpretAsType /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/schema.js:908:44
+      1  100.0%        LazyCompile: ~Schema.path /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/schema.js:644:33
+      1  100.0%          LazyCompile: ~add /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/schema.js:478:36
+      1  100.0%            LazyCompile: ~Schema /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/schema.js:91:16
+      1    1.0%      LazyCompile: ~NativeCollection.onOpen /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:47:45
+      1  100.0%        LazyCompile: ~Connection.onOpen /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/connection.js:626:39
+      1  100.0%          LazyCompile: ~_setClient /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/connection.js:826:20
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/connection.js:786:20
+      1    1.0%      LazyCompile: ~Mongoose._model /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/index.js:525:37
+      1  100.0%        LazyCompile: ~Mongoose.model /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/index.js:461:36
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/models/Users.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%        LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.0%      LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%        LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.0%      LazyCompile: ~Long.compare /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/long.js:291:39
+      1  100.0%        LazyCompile: ~Long.comp /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/long.js:311:36
+      1  100.0%          LazyCompile: ~Long.lessThanOrEqual /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/long.js:516:47
+      1  100.0%            LazyCompile: ~deserializeObject /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    1.0%      LazyCompile: ~Kareem.createWrapper /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/kareem/index.js:364:42
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/helpers/query/applyQueryMiddleware.js:63:13
+      1  100.0%          /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1  100.0%            LazyCompile: ~applyQueryMiddleware /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/helpers/query/applyQueryMiddleware.js:26:30
+      1    1.0%      LazyCompile: ~File /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/winston/lib/winston/transports/file.js:33:14
+      1  100.0%        Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/utils/logger.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~Connection /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:37:16
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:16:29
+      1  100.0%          LazyCompile: ~callback /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:239:31
+      1  100.0%            LazyCompile: ~connectHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connect.js:270:28
+      1    1.0%      LazyCompile: ~ClientSession /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sessions.js:54:16
+      1  100.0%        LazyCompile: ~startSession /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:354:17
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/execute_operation.js:17:48
+      1  100.0%            LazyCompile: ~maybePromise /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:482:22
+      1    1.0%      LazyCompile: ~<anonymous> node:internal/validators:154:3
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/url:682:12
+      1  100.0%          LazyCompile: ~toString node:internal/url:730:11
+      1  100.0%            /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/yargs/build/index.cjs:1:46155
+      1  100.0%        LazyCompile: ~Xt /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/yargs/build/index.cjs:1:28408
+      1  100.0%          LazyCompile: ~fe.Yargs /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/yargs/build/index.cjs:1:61147
+      1  100.0%            Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/index.js:1:1
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/utils.js:466:18
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/utils.js:494:13
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/operations/execute_operation.js:49:47
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/topology.js:560:53
+      1  100.0%        Function: ^emit node:events:474:44
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server.js:58:62
+      1  100.0%            Function: ^emit node:events:474:44
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server.js:58:62
+      1  100.0%        Function: ^emit node:events:474:44
+      1  100.0%          LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/monitor.js:172:73
+      1  100.0%            Function: ^messageHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/connection_string.js:72:39
+      1  100.0%        LazyCompile: ~onresolve node:dns:207:19
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/connection_string.js:1022:13
+      1  100.0%        /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/color/node_modules/color-convert/index.js:61:25
+      1  100.0%        /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1  100.0%          Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/color/node_modules/color-convert/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:83:24
+      1  100.0%        /home/leniador/.nvm/versions/node/v16.14.2/bin/node
+      1  100.0%          LazyCompile: ~Run /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    1.0%      Function: ~<anonymous> node:internal/modules/cjs/helpers:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1    1.0%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.0%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    1.0%      Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/whatwg-url/lib/encoding.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/webidl-conversions/lib/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/are-we-there-yet/lib/tracker-stream.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ^serializeInto /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%        Function: ^serializeObject /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%          Function: ^serializeInto /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            Function: ^serialize /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/bson/lib/bson.js:111:19
+      1    1.0%      Function: ^messageHandler /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%        Function: ^emit node:events:474:44
+      1  100.0%          Function: ^processIncomingData /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%            Function: ^_write /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1    1.0%      Function: ^fromStringFast node:buffer:413:24
+      1  100.0%        Function: ^fromString node:buffer:432:20
+      1  100.0%          Function: ^from node:buffer:296:28
+      1  100.0%            LazyCompile: ~continueScramConversation /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1    1.0%      Function: ^ServerDescription /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server_description.js:34:16
+      1  100.0%        LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/server.js:58:62
+      1  100.0%          Function: ^emit node:events:474:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/node_modules/mongodb/lib/sdam/monitor.js:172:73
+

@@ -1,0 +1,56 @@
+1)VISTA INFO:
+Levantamos el servidor por ejemplo en puerto 8081, y en la barra de url escribimos:
+127.0.0.1:8081/info
+
+2)NODEMON:
+
+a) Iniciar en modo Fork:   (no es necesario especificar el modo ya que por default ingresa en fork)
+nodemon src/index.js -p 8081   
+b) Iniciar en modo CLUSTER: 
+nodemon src/index.js -p 8081 -m CLUSTER
+
+3) FOREVER
+
+a) Iniciamos en modo cluster en puerto 8082
+forever src/index.js -m CLUSTER -p 8082  
+b) Iniciamos en modo form en puerto 8081
+forever src/index.js -p 8082
+
+4) NGINX
+
+Iniciamos con PM2 4 conexiones en fork en modo escucha (watch). Una en cada puerto, puedo entrar a todas las rutas desde NGINX a /api/random y la carga se balancea por igual en cada una de ellas ya que no le definí ningún tamaño en la configuración de NGINX.
+pm2 start ./src/index.js --name="server-8082" --watch -- 8082
+pm2 start ./src/index.js --name="server-8083" --watch -- 8083
+pm2 start ./src/index.js --name="server-8084" --watch -- 8084
+pm2 start ./src/index.js --name="server-8085" --watch -- 8085
+
+pm2 delete all  finalizo todos los servidores FORK  (puedo detenerlos sin eliminarlos, utilizando pm2 stop all)
+
+Para iniciar en modo cluster:
+pm2 start ./src/index.js --name="server-8082" --watch -i max -- 8082
+
+CONFIGURACIÓN DE NGINX
+Al tener linux se hace en distintas carpetas y archivos, pero lo importante y lo modificado fue lo siguiente:
+
+http {
+upstream node_random {
+		server 127.0.0.1:8082;
+		server 127.0.0.1:8083 ;
+		server 127.0.0.1:8084 ;
+		server 127.0.0.1:8085 ;
+	}
+}
+
+server {
+
+    listen 80;
+    server_name nginx_node;
+    root /home/leniador/Desktop/14-Process-Child-Fork-Dotenv-master/src/;
+    location /api/random/ {
+	proxy_pass http://node_random;
+		 }
+	 }
+
+Con esta configuración le especifico que cuando se ingrese en la ruta /api/random utilice el proxy llamado node_random, y este hace upstream en los 4 puertos.
+
+
